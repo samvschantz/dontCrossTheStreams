@@ -1,4 +1,4 @@
-var getHTML = require('./httpFunctions');
+var getHTML = require('./callbacks/httpFunctions');
 
 var requestOptions = {
   host: 'sytantris.github.io',
