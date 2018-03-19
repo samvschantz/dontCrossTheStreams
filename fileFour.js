@@ -2,16 +2,16 @@ var https = require('https');
 
 function getHTML (options, callback) {
 
-  var host = requestOptions['host']
-  var path = requestOptions['path']
+  var host = options['host']
+  var path = options['path']
   //above works fine
 
-  https.get(requestOptions, function(response){
+  https.get(options, function(response){
 
     response.setEncoding('utf8');
 
     response.on('data', function (data){
-      console.log(callback(data))
+      callback(data)
     });
   });
 }
